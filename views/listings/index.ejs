@@ -38,9 +38,68 @@
         align-items: center;
       }
 
+
+      .filter {
+        display: none;
+      }
+  
+      /* Display dropdown on small screens */
+      .filter-dropdown {
+        display: none;
+      }
+  
+      /* Media query for small screens */
+      @media screen and (max-width: 768px) {
+        .filter {
+          display: block;
+        }
+  
+        /* Hide filters on small screens */
+        .filter-dropdown {
+          display: block;
+        }
+      }
+
+
+      .filter {
+        display: block; /* Show filters by default */
+      }
+      
+      /* Hide dropdown on larger screens */
+      .filter-dropdown {
+        display: none;
+      }
+      
+      /* Media query for small screens */
+      @media screen and (max-width: 768px) {
+        .filter {
+          display: none; /* Hide filters on small screens */
+        }
+      
+        /* Show dropdown on small screens */
+        .filter-dropdown {
+          display: block;
+        }
+      }
     </style>
 
 <div id="filters" >
+
+
+
+  <select class="filter-dropdown">
+    <option value="">Select Filter</option>
+    <option value="trending">Trending</option>
+    <option value="rooms">Rooms</option>
+    <option value="iconic-cities">Iconic Cities</option>
+    <option value="mountains">Mountains</option>
+    <option value="castles">Castles</option>
+    <option value="amazing-pools">Amazing Pools</option>
+    <option value="camping">Camping</option>
+    <option value="farms">Farms</option>
+    <option value="arctic">Arctic</option>
+    <option value="new">New</option>
+  </select>
 
     <div class="filter">
       <div> <i class="fa-solid fa-fire"></i></div> 
